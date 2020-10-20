@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="360.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ScanOrderArrivalController">
+   <children>
+      <TabPane layoutX="-57.0" prefHeight="360.0" prefWidth="453.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Scan Existing Ingredient Arrival">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="75.0" layoutY="14.0" prefHeight="32.0" prefWidth="319.0" text="Scan Existing Ingredient Arrival">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="ingredientChoices" layoutX="205.0" layoutY="146.0" prefHeight="31.0" prefWidth="209.0" />
+                        <TextField fx:id="qtyText" layoutX="205.0" layoutY="187.0" prefHeight="30.0" prefWidth="209.0" />
+                        <Label layoutX="53.0" layoutY="149.0" prefHeight="32.0" prefWidth="150.0" text="Ingredient">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="189.0" prefHeight="32.0" prefWidth="150.0" text="Quantity">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="scanArrivalBtn" layoutX="14.0" layoutY="246.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="97.0">
+                           <graphic>
+                              <ImageView fitHeight="49.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/scan.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="backToInventory" layoutX="120.0" layoutY="247.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/inventory.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="backToMainBtn" layoutX="227.0" layoutY="247.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="113.0" text="To Main">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/backIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="53.0" layoutY="59.0" prefHeight="32.0" prefWidth="150.0" text="Enter Role">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="107.0" prefHeight="32.0" prefWidth="150.0" text="Enter ID #">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="employeeRoleChoiceBix" layoutX="203.0" layoutY="61.0" prefHeight="28.0" prefWidth="212.0" />
+                        <TextField fx:id="employeeIDTextField" layoutX="203.0" layoutY="106.0" prefHeight="27.0" prefWidth="213.0" />
+                        <Button fx:id="clearFieldsBtnTab1" layoutX="346.0" layoutY="246.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="96.0" text="Clear Fields" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add New Ingredient To Inventory">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="43.0" layoutY="76.0" prefHeight="32.0" prefWidth="150.0" text="Ingredient">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="123.0" prefHeight="32.0" prefWidth="150.0" text="Quantity">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="220.0" prefHeight="32.0" prefWidth="150.0" text="Units">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="175.0" prefHeight="32.0" prefWidth="150.0" text="Threshold">
+                           <font>
+                              <Font name="American Typewriter" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newIngredientTextField" layoutX="177.0" layoutY="77.0" prefHeight="31.0" prefWidth="248.0" />
+                        <TextField fx:id="newIngredientQtyTextField" layoutX="177.0" layoutY="124.0" prefHeight="30.0" prefWidth="248.0" />
+                        <TextField fx:id="newIngredientThresholdTextField" layoutX="177.0" layoutY="175.0" prefHeight="32.0" prefWidth="248.0" />
+                        <TextField fx:id="newIngredientUnitsTextField" layoutX="178.0" layoutY="221.0" prefHeight="31.0" prefWidth="247.0" />
+                        <Button fx:id="addNewIngredientToInventoryBtn" layoutX="92.0" layoutY="266.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Add To Inventory" />
+                        <Label layoutX="59.0" layoutY="24.0" prefHeight="32.0" prefWidth="335.0" text="Add New Ingredient To Inventory">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="clearFieldsBtnTab2" layoutX="239.0" layoutY="266.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" text="Clear Fields" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableOrderingController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="288.0" layoutX="15.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="360.0" />
+      <Label layoutX="15.0" layoutY="16.0" text="MENU">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="564.0" layoutX="379.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="483.0" />
+      <Button fx:id="addBtn" layoutX="15.0" layoutY="577.0" mnemonicParsing="false" onAction="#clickAddBtn" prefHeight="79.0" prefWidth="360.0" text="Add Order">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/addBill.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="123.0" layoutX="15.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="360.0" />
+      <ListView fx:id="menuListView" layoutX="22.0" layoutY="51.0" onMouseClicked="#clickMenuItem" prefHeight="277.0" prefWidth="346.0" />
+      <Label layoutX="15.0" layoutY="339.0" text="Modifications">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="499.0" text="Quantity Of Ingredient">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modificationQuantity" layoutX="15.0" layoutY="523.0" prefHeight="46.0" prefWidth="250.0" promptText="Eg : 2 (Meaning 2 extra cheese slices)" />
+      <Button fx:id="addModificationBtn" layoutX="272.0" layoutY="501.0" mnemonicParsing="false" onAction="#clickAddModificationBtn" prefHeight="69.0" prefWidth="101.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/confirmOrder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ListView fx:id="modiListView" layoutX="24.0" layoutY="378.0" onMouseClicked="#clickModiListView" prefHeight="107.0" prefWidth="339.0" />
+      <ListView fx:id="ordersListView" layoutX="393.0" layoutY="58.0" onMouseClicked="#clickOrdersListView" prefHeight="277.0" prefWidth="455.0" />
+      <Label layoutX="258.0" layoutY="20.0" prefHeight="23.0" prefWidth="75.0" text="Table#:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="tablenumLabel" layoutX="335.0" layoutY="12.0" prefHeight="32.0" prefWidth="21.0" text="1" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="seatTxt" alignment="BOTTOM_CENTER" layoutX="711.0" layoutY="11.0" prefHeight="32.0" prefWidth="38.0" promptText="# ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></TextField>
+      <Button fx:id="seatSetBtn" layoutX="749.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickSeatSetBtn" prefHeight="32.0" prefWidth="41.0" text="Set" />
+      <Label layoutX="644.0" layoutY="18.0" prefHeight="23.0" prefWidth="68.0" text="Seats:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="19.0" text="Server:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="serverIdTxt" alignment="CENTER" layoutX="457.0" layoutY="10.0" prefHeight="35.0" prefWidth="134.0" promptText="Server ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="serverSetBtn" layoutX="591.0" layoutY="12.0" mnemonicParsing="false" onAction="#clickServerSetBtn" prefHeight="32.0" prefWidth="41.0" text="Set" />
+      <TabPane layoutX="393.0" layoutY="344.0" prefHeight="258.0" prefWidth="455.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Reorder                       ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="455.0">
+                     <children>
+                        <ListView fx:id="reOrderListView" layoutX="230.0" layoutY="56.0" onMouseClicked="#clickReOrederListView" prefHeight="170.0" prefWidth="141.0" />
+                        <ListView fx:id="reasonListView" layoutX="8.0" layoutY="56.0" onMouseClicked="#clickReasonListView" prefHeight="170.0" prefWidth="224.0" />
+                        <Button fx:id="returnBtn" layoutX="371.0" layoutY="92.0" mnemonicParsing="false" onAction="#clickReturnBtn" prefHeight="136.0" prefWidth="82.0" text="Return" />
+                        <Button fx:id="modeBtn" alignment="CENTER_RIGHT" layoutX="372.0" layoutY="56.0" mnemonicParsing="false" onAction="#clickModeBtn" prefHeight="35.0" prefWidth="82.0" text="Off" />
+                        <Label layoutX="384.0" layoutY="65.0" text="Mode:" />
+                        <Button fx:id="cancelOrderBtn" layoutX="370.0" layoutY="20.0" mnemonicParsing="false" onAction="#clickcancelOrderBtn" prefHeight="35.0" prefWidth="85.0" text="Cancel" />
+                        <TextField fx:id="selectedOrderLabel" editable="false" layoutX="14.0" layoutY="16.0" prefHeight="35.0" prefWidth="353.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Bill            ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="229.0" prefWidth="455.0">
+                     <children>
+                        <ListView fx:id="billListView" layoutX="185.0" layoutY="14.0" prefHeight="130.0" prefWidth="151.0" />
+                        <Button fx:id="addSplitBtn" layoutX="183.0" layoutY="152.0" mnemonicParsing="false" onAction="#clickAddSplitBtn" prefHeight="27.0" prefWidth="153.0" text="Add Item" />
+                        <Button fx:id="printBillBtn" layoutX="336.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickPrintBillBtn" prefHeight="46.0" prefWidth="111.0" text="Print Bill">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="payBtn" layoutX="336.0" layoutY="56.0" mnemonicParsing="false" onAction="#clickPayBtn" prefHeight="170.0" prefWidth="112.0" text="PAY ">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="tableBillListView" layoutX="14.0" layoutY="14.0" onMouseClicked="#clickBillListView" prefHeight="202.0" prefWidth="170.0" />
+                        <Button fx:id="addSplitBtn1" layoutX="183.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickAddSplitBtn" prefHeight="27.0" prefWidth="152.0" text="Remove Item" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="backToTableLayoutBtn" layoutX="627.0" layoutY="612.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text=" Back">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backBtn" layoutX="744.0" layoutY="612.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="To Main">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="finishTableBtn" layoutX="379.0" layoutY="613.0" mnemonicParsing="false" onAction="#clickfinishTableBtn" prefHeight="46.0" prefWidth="250.0" text="Finish Table">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

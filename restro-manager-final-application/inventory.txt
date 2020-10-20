@@ -1,0 +1,19 @@
+[Inventory File | 2020/10/20 18:28:37 | restaurant0520]
+
+Name                      Amount     Threshold  Units          
+Tomato Boi,               30.0,      10.0,      Kilograms      
+Ketchup,                  30.0,      9.0,       Litres         
+Leek,                     30.0,      10.0,      Kilograms      
+Chicken Broth,            20.0,      4.0,       Litres         
+Pork,                     30.0,      10.0,      Kilograms      
+Cheese,                   30.0,      10.0,      Numbers        
+Ham,                      30.0,      10.0,      Numbers        
+Tomato,                   30.0,      10.0,      Numbers        
+Mushroom,                 30.0,      10.0,      grams          
+Water,                    30.0,      10.0,      Liters         
+Potato,                   30.0,      20.0,      Numbers        
+Oil,                      30.0,      10.0,      Liters         
+Bread,                    30.0,      10.0,      Numbers        
+Onion,                    30.0,      10.0,      Numbers        
+Beef,                     30.0,      10.0,      Kilograms      
+Banana,                   60.0,      10.0,      Numbers        

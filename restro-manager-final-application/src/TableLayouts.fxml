@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="507.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableLayoutController">
+   <children>
+      <TabPane prefHeight="507.0" prefWidth="585.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Table Layout">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="596.0" prefWidth="700.0">
+                     <children>
+                        <Button fx:id="table2Btn" layoutX="192.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="115.0" prefWidth="161.0" text="2" />
+                        <Button fx:id="table1Btn" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="115.0" prefWidth="153.0" text="1" />
+                        <Button fx:id="table3Btn" layoutX="379.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="116.0" prefWidth="152.0" text="3" />
+                        <Button fx:id="table4Btn" layoutX="14.0" layoutY="168.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="128.0" prefWidth="159.0" text="4" />
+                        <Button fx:id="table5Btn" layoutX="192.0" layoutY="168.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="129.0" prefWidth="161.0" text="5" />
+                        <Button fx:id="table6Btn" layoutX="379.0" layoutY="170.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="125.0" prefWidth="159.0" text="6" />
+                        <Button fx:id="table7Btn" layoutX="14.0" layoutY="313.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="127.0" prefWidth="159.0" text="7" />
+                        <Button fx:id="table8Btn" layoutX="192.0" layoutY="313.0" mnemonicParsing="false" onAction="#clickTables" prefHeight="127.0" prefWidth="160.0" text="8" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Serve">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="8.0" layoutY="14.0" prefHeight="33.0" prefWidth="218.0" text="Orders Ready To Serve">
+                           <font>
+                              <Font name="American Typewriter" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="300.0" layoutY="422.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="188.0" text="Refresh Table">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/reloadPng.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="servingListView" layoutX="4.0" layoutY="52.0" prefHeight="363.0" prefWidth="576.0" />
+                        <TextField fx:id="serverIdTxt" alignment="CENTER" layoutX="434.0" layoutY="14.0" prefHeight="0.0" prefWidth="57.0" promptText="#Id">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="serverIdSet" layoutX="495.0" layoutY="15.0" mnemonicParsing="false" onAction="#ClickServerIdSet" prefHeight="33.0" prefWidth="51.0" text="Set" />
+                        <Button fx:id="serveBtn" layoutX="100.0" layoutY="422.0" mnemonicParsing="false" onAction="#clickServeBtn" prefHeight="39.0" prefWidth="192.0" text="Serve">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="357.0" layoutY="14.0" prefHeight="33.0" prefWidth="74.0" text="Server:">
+                           <font>
+                              <Font name="American Typewriter" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="backBtn" layoutX="586.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="141.0" text="To Main">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="managerbtn" layoutX="586.0" layoutY="56.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="141.0">
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/inventory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ListView fx:id="serverListView" layoutX="586.0" layoutY="165.0" onMouseClicked="#clickServerListView" prefHeight="203.0" prefWidth="134.0" />
+   </children>
+</AnchorPane>

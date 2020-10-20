@@ -1,0 +1,12 @@
+[Menu File | 2020/10/20 18:28:37 | restaurant0520]
+
+Dish Name                      Price      Ingredients                             
+Classic Hamburger,             12.0,      Beef:1.0, Bread:2.0, Tomato:2.0, Onion:2.0, 
+Banana Smoothie,               4.0,       Banana:2.0, Water:2.0,                  
+Water,                         0.0,       Water:0.5,                              
+Mushroom Soup,                 6.0,       Mushroom:2.0, Tomato:2.0, Water:2.0, Onion:2.0, 
+Pork Chop,                     14.0,      Pork:2.0, Onion:2.0,                    
+Soyu Ramen,                    13.0,      Water:3.0,                              
+Spaghetti and Meat Balls,      9.5,       Beef:3.0, Tomato:2.0, Onion:2.0,        
+Apple,                         1.0,       Onion:1.0,                              
+Mushroom Burger,               14.0,      Mushroom:2.0, Potato:2.0, Ham:2.0, Bread:2.0, 

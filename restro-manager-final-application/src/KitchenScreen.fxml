@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="629.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KitchenScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="434.0" layoutX="27.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="373.0" />
+      <Label layoutX="27.0" layoutY="51.0" text="Orders">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="orderConfirmBtn" layoutX="27.0" layoutY="519.0" mnemonicParsing="false" onAction="#clickOrderConfirmBtn" prefHeight="42.0" prefWidth="373.0" text="Confirm Order">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="421.0" layoutY="117.0" />
+      <Button fx:id="startCookingBtn" layoutX="416.0" layoutY="184.0" mnemonicParsing="false" onAction="#clickStartCooking" prefHeight="51.0" prefWidth="235.0" text="Start Cooking">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Button>
+      <Button fx:id="OrderIsReadyBtn" layoutX="650.0" layoutY="184.0" mnemonicParsing="false" onAction="#clickOrderIsReady" prefHeight="51.0" prefWidth="208.0" text="Order Is Ready" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="371.0" layoutX="422.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="437.0" />
+      <Label layoutX="421.0" layoutY="134.0" prefHeight="51.0" prefWidth="198.0" text="Cooking">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="734.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" text="To Main">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="77.0" fitWidth="151.0" layoutX="711.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Kitchen-PNG-Image.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="ordersListView" layoutX="36.0" layoutY="102.0" prefHeight="405.0" prefWidth="353.0" />
+      <ListView fx:id="cookingListView" layoutX="430.0" layoutY="247.0" prefHeight="345.0" prefWidth="420.0" />
+      <Button fx:id="refreshBtn" layoutX="27.0" layoutY="566.0" mnemonicParsing="false" onAction="#clickRefreshBtn" prefHeight="42.0" prefWidth="373.0" text="Refresh" />
+   </children>
+</AnchorPane>

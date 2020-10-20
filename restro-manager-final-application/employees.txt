@@ -1,0 +1,14 @@
+[Employee File | 2020/10/20 18:28:37 | restaurant0520]
+
+Server Count = 5
+Cook Count = 2
+Manager Count = 1
+
+ID    Role       Name      
+S:0,  Server,    Simon,    
+S:1,  Server,    Jack,     
+S:2,  Server,    Alice,    
+S:3,  Server,    Steve,    
+S:4,  Server,    Merlin,   
+C:0,  Cook,      Sae,      
+C:1,  Cook,      Ramsey,   

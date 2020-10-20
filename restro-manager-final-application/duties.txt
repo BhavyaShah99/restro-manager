@@ -1,0 +1,27 @@
+BHAVYA:
+- Made the GUI fxml files and add all the visual features for the GUI's
+- Worked on the code for the ManagerController.java
+- Worked on the functionality Manager.fxml
+- Worked on the code for RestaurantController.java
+- Worked on the functionality Restaurant.fxml
+- Worked on the code for ScanOrderArrivalController.java
+- Worked on the functionality ScanOrderArrival.fxml
+- Changed all important print statements to alert boxes in the classes under the model package
+
+SIMON:
+- Worked on the classes from phase1 for both groups and merged the codes of both groups
+- Worked on KitchenScreenController.java and fixed errors
+- Worked On ManagerController.java and KitchenScreenController.java
+- Made the menu.txt file and read in into the Menu list view in the Table Ordering Screen.
+- Removed all print statements that were used to test certain functions.
+
+JACK:
+- Worked on TableOrderingController.java
+- Worked on TableLayoutController.java
+- Made the create bill and split bill methods and added functionality to them
+
+SAE:
+- Worked on passing Restaurant(data) to all controllers and set all controllers to have same Restaurant
+- Worked on TableOrderingController.java
+- Worked on TableLayoutController.java
+- Worked on KitchenScreenController.java too.
